@@ -1,0 +1,14 @@
+Package: torsaseuclid
+Type: Package
+Title: Euclidian GCD Algorithm
+Version: 1.0
+Date: 2016-09-09
+Authors@R: c(person("Torrrin","Danner", role="aut",email="torda385@student.liu.se"), person("Sascha","Schmalz",role="aut"))
+Author: Torrin Danner [aut],
+Sascha Schmalz [aut]
+Maintainer: Torrin Danner <torda385@student.liu.se>
+Description: This package will use a Euclidian Algorithm to find the Greatest
+    Common Denominator of two numbers. It is a test package for a course in Advanced
+    R Programming at Linköping University, Sweden.
+License: GPL (>=2)
+RoxygenNote: 5.0.1
