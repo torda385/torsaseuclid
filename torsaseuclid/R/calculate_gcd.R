@@ -16,19 +16,20 @@ calculate_gcd <- function(divisor, dividend) {
   if (!is.numeric(divisor) || !is.numeric(dividend)) {
     stop("Divisor and dividend have to be numerical.")
   }
-
+  
   if (!is.atomic(divisor) || !is.atomic(dividend)) {
     stop("Divisor and dividend have to be atomic vectors.")
   }
 
+  
   if (length(divisor) > 1 || length(dividend) > 1) {
     stop("Divisor and dividend can only be vectors with the length 1.")
   }
-
+  
   if (divisor == 0) {
     stop("Not possible to divide by 0.")
   }
-
+  
   if (divisor < 0 && dividend < 0) {
     stop("Divisor and dividend have to be greater than or equal to 0.")
   }
@@ -39,7 +40,7 @@ calculate_gcd <- function(divisor, dividend) {
     dividend <- temp
     cat("WARNING!\nDivisor has to be greater than the dividend. Values were swapped!\n\n")
   }
-
+  
   residual <- dividend %% divisor
   if (residual == 0) {
     return(divisor)
