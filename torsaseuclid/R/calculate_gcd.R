@@ -29,8 +29,15 @@ calculate_gcd <- function(divisor, dividend) {
     stop("Not possible to divide by 0.")
   }
 
-  if (divisor < 0 && dividend > 0) {
-    stop("Divisor has to be greater or equal 0 for positive values of the dividend.")
+  if (divisor < 0 && dividend < 0) {
+    stop("Divisor and dividend have to be greater than or equal to 0.")
+  }
+  
+  if (divisor > dividend) {
+    temp <- divisor
+    divisor <- dividend
+    dividend <- temp
+    cat("WARNING!\nDivisor has to be greater than the dividend. Values were swapped!\n\n")
   }
 
   residual <- dividend %% divisor
